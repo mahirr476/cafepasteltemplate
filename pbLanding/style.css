@@ -1,0 +1,581 @@
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+    
+}
+@keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+@font-face {
+    font-family: saltwater;
+    src: url("./fonts/SaltwaterTaffy-Regular.ttf");
+}
+
+@font-face {
+    font-family: caviar;
+    src: url("./fonts/CaviarDreams_Bold.ttf");
+}
+html {
+    scroll-behavior: smooth !important;
+    overflow-x: hidden;
+}
+
+
+.reveal{
+    position: relative;
+    opacity: 0;
+    transition: all 2s ease;
+  }
+
+  .reveal.active{
+    opacity: 1;
+
+  } 
+
+body {
+    background-color: #ffc4a5;
+   
+}
+
+
+section {
+    min-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 320px;
+}
+
+
+.headerBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerBox h1 {
+    font-family: caviar;
+    font-size: 2rem;
+    text-align: center;
+    color:rgb(0, 50, 117);
+}
+
+.logoDonut {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.logoDonut img {
+    width: 135px; 
+    height: 135px;
+    animation: rotation 25s linear infinite;
+}
+
+.user {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    z-index: 50;
+}
+
+.user:hover {
+    background-color: rgb(254, 231, 255);
+}
+.cart:hover {
+    background-color: rgb(254, 231, 255);
+}
+
+.navDown:hover {
+    background-color: rgb(254, 231, 255);
+}
+.cart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+    z-index: 50;
+}
+
+
+.user a img {
+    width: 30;
+    height: 30px;
+}
+.cart a img {
+    width: 45px;
+    height: 45px;
+}
+.google a {
+    font-family: caviar;
+    width: 130px;
+    height: 50px;
+    min-width: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+
+}
+
+.emailBox a {
+    font-family: caviar;
+    width: 130px;
+    height: 50px;
+    min-width: 30px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s ease-in-out;
+}
+
+.google a:hover {
+    background-color: rgba(24, 28, 72, 0.65);
+    color: white;
+}
+
+.emailBox a:hover {
+    background-color: rgba(215, 218, 244, 0.65);
+}
+
+
+  /* navbar */ 
+
+  .navbar { 
+    position: fixed;
+    width: 100%;
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+    background-color: bisque;
+}
+.burgerBar {
+    width: 70%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    gap: 25px;
+}
+.logoBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px
+}
+.burgerBox {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+
+}
+.navbar ul li {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+.navbar ul {
+    margin-top: 100px;
+    height: 100vh;
+    width: 80%;
+    padding: 100px;
+}
+
+.navbar a {
+    font-family: saltwater, sans-serif;
+    font-weight: 100;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+
+
+
+.nav-menu { 
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 40px;
+    text-align: center;
+    opacity: 0;
+    background-color: #ffd5aa;
+}
+
+.active {
+    opacity: 1;
+    transition: 1s ease-in-out;
+}
+
+
+
+.nav-link { 
+    transition: 0.7s ease;
+}
+
+.nav-link:hover { 
+    color: whitesmoke;
+}
+
+.hamburger { 
+    display: block;
+    cursor: pointer; 
+    padding: 10px;
+    border-radius: 15px;
+    transition: 0.1s ease-in-out;
+   
+}
+
+.bar { 
+    display: block; 
+    width: 40px; 
+    height: 4px; 
+    margin: 10px auto; 
+    -webkittransition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: rgb(177, 139, 129);
+    border-radius: 15px;
+
+}
+
+
+
+.hamburger:hover .bar {
+    background-color: rgb(255, 186, 117);
+}
+
+
+#navHome:hover, #navAbout:hover, #navProjects:hover, #navHobby:hover, #navResume:hover, #navContact:hover, #navGallary:hover {
+    color:rgb(255, 255, 255);
+    transition: 0.5s ease;
+    font-size: 1.3rem; 
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #de8d80;
+}
+
+#navGallary {
+    color:rgb(130, 98, 138);
+    border: 1px solid rgb(142, 65, 65);
+    padding: 10px;
+    border-radius: 20px;
+}
+#navHome {
+    color:rgb(180, 124, 127);
+    border: 1px solid rgb(142, 65, 65);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#navAbout{
+    color:rgb(96, 121, 143);
+    border: 1px solid rgb(142, 65, 65);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#navProjects{
+    color:rgb(60, 138, 81);
+    border: 1px solid rgb(142, 65, 65);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+
+
+#navResume{
+    color: rgb(75, 66, 66);
+    border: 1px solid rgb(142, 65, 65);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+@media(max-width: 650px) {
+ 
+  
+    .logoBox {
+        width: 50px;
+        height: 50px;
+    }
+    .logoDonut img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .headerBox h1 {
+        font-size: 1rem;
+    }
+
+    .user a img {
+        width: 20px;
+        height: 20px;
+    }
+    
+    .cart a img {
+        width: 25px;
+        height: 25px;
+    }
+    .bar {
+        width: 15px;
+        margin: 1px 0;
+    }
+
+    
+.navbar a {
+    
+    font-size: 2rem;
+ 
+}
+
+.nav-menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+}
+
+@media(min-width: 68px) {
+    .hamburger { 
+        display: block;
+        z-index: 10;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0; 
+
+    }
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(14px) rotate(45deg);
+        background-color:rgb(73, 73, 73);
+        
+    }
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-14px) rotate(-45deg);
+        background-color:rgb(128, 128, 128);
+
+    }
+
+    .nav-menu { 
+        position: fixed;
+        top:-500px; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        transition: 0.5s; 
+    }
+    .nav-item { 
+        margin: 1px 0;         
+
+    }
+
+    .nav-menu.active { 
+        top:0;
+         
+    }
+    
+}
+
+
+  /*** c1*/
+
+  .ThreeC {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0;
+}
+
+.options {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.main {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+  .contentOne {
+    width: 200px;
+    height: 200px;
+    margin:  0;
+    background-image: url("./imgs/cake.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 0.2s ease-in-out;
+    border-radius: 50%;
+  }
+
+  .contentTwo {
+    width: 200px;
+    height: 200px;
+    transition: 0.2s ease-in-out;
+    background-image: url("./imgs/cake1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+
+  }
+  .contentThree {
+    width: 200px;
+    height: 200px;
+    transition: 0.2s ease-in-out;
+    background-image: url("./imgs/cake2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+  }
+
+  .contentFour {
+    transition: 0.2s ease-in-out;
+    width: 800px;
+    height: 600px;
+    background-image: url("./imgs/1636891568505-549300.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 50px 5px rgb(197, 115, 87);
+  }
+
+  .contentOne:hover {
+    box-shadow: 0 0 50px 5px rgb(168, 119, 109);
+  }
+
+  .contentTwo:hover {
+    box-shadow: 0 0 50px 5px rgb(168, 119, 109);
+  }
+  .contentThree:hover {
+    box-shadow: 0 0 50px 5px rgb(168, 119, 109);
+  }
+/**************************************************************/
+footer {
+    min-width: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    flex-wrap: wrap;
+    background-color: #ffc98e;
+}
+
+footer div h3 {
+    margin: 1rem 0;
+    font-family: saltwater, sans-serif;
+}
+
+
+footer div h2 {
+    margin: 1rem 0;
+    font-family: saltwater, sans-serif;
+    font-size: 2rem;
+    font-weight: 100;
+
+}
+
+footer div p {
+    line-height: 2rem;
+    color: black;
+    font-family: caviar, sans-serif;
+    font-weight: 100;
+}
+
+.elements {
+    width: 80%;
+    margin: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 50px;
+
+
+}
+
+.atrList {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.atrList a {
+    margin: 2px;
+}
+
+.activeAttrib {
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.attrib {
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.attrib p:hover {
+    color: rgb(0, 234, 255);
+}
+
+.attrib p {
+    cursor: pointer;
+    background-color: white;
+    padding: 5px;
+    transition: 0.5s ease-in-out;
+    border-radius: 10px;
+
+}
+
+.attrib a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.7rem;
+    font-family: "Montserrat";
+    text-align: left;
+    font-weight: 100;
+}
